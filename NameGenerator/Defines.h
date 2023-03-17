@@ -34,7 +34,14 @@ struct COMPARATOR
 	}
 } Comparator;
 
+struct DATA_Array
+{
+	CHARACTER Alphabet[26];
+	COMBOPROB Combos[26][26];
+};
+
 DATA Data;
+DATA_Array Data_Array;
 std::ifstream FileToRead;
 std::vector<std::string> Names;
 int MinCharacters;

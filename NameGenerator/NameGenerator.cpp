@@ -2,15 +2,24 @@
 
 int main()
 {
-    InitData();
-	//InitData_Test();
+#if 0
+	InitData();
 	ReadFile("HumanMale.txt");
 	MinMax();
-	//ReadFile_Test();
 	GenerateProb();
 	NormalizeProb();
-	//GenerateProb_Test();
-	std::cout << GenerateName(5, 10);
+#endif // 0
+
+	
+#if 1
+	//InitData_Test();
+	//ReadFile_Test();
+	GenerateProb_Test();
+#endif // 0
+
+	CreateComboArray();
+
+	//std::cout << GenerateName(5, 10);
 }
 
 //Credit to the YouTube Channel Let's Code Physics for the tutorial followed to make the code
