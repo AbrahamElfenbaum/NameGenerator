@@ -2,7 +2,7 @@
 
 int main()
 {
-#if 0
+#if 1
 	InitData();
 	ReadFile("HumanMale.txt");
 	MinMax();
@@ -16,8 +16,6 @@ int main()
 	//ReadFile_Test();
 	GenerateProb_Test();
 #endif // 0
-
-	CreateComboArray();
 
 	//std::cout << GenerateName(5, 10);
 }

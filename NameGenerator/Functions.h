@@ -280,62 +280,31 @@ void ReadFile_Test()
 /// </summary>
 void GenerateProb_Test()
 {
+
+	
+	char firstLetter;
+	int letterCount = 0;
+	for (int i = 0; i < 26; i++)
+	{
+		firstLetter = (char)(i + 65);
+		for (auto combo : Data.Combos)
+		{
+			if (combo.Combo[0] == firstLetter)
+			{
+				std::cout << combo.Combo << ": " << combo.Prob << " ";
+			}
+		}
+		std::cout << "\n---------------------------------------------------------\n";
+	}
+	
+	/*
+	
 	for (auto prob : Data.Combos)
 	{
 		std::cout << prob.Combo << " " << prob.Prob << std::endl;
 	}
+	*/
+	
 }
 #pragma endregion
-
-
-void CreateComboArray()
-{
-	for (int i = 0; i < 26; i++)
-	{
-		Data_Array.Alphabet[i].Lower = (char)(i + 97);
-		Data_Array.Alphabet[i].Upper = (char)(i + 65);
-
-		if (i == 0 || i == 4 || i == 8 || i == 14 || i == 20) //a,e,i,o,u
-		{
-			Data_Array.Alphabet[i].isConsonant = false;
-			Data_Array.Alphabet[i].isVowel = true;
-		}
-		else if (i == 24) //y
-		{
-			Data_Array.Alphabet[i].isConsonant = true;
-			Data_Array.Alphabet[i].isVowel = true;
-		}
-		else //all other letters
-		{
-			Data_Array.Alphabet[i].isConsonant = true;
-			Data_Array.Alphabet[i].isVowel = false;
-		}
-	}
-
-	std::string c;
-	for (int i = 0; i < 26; i++)
-	{
-		for (int j = 0; j < 26; j++)
-		{
-			c += (char)(i + 65);
-			c += (char)(j + 65);
-			Data_Array.Combos[i][j].Combo = c;
-			Data_Array.Combos[i][j].Prob = 0.0;
-			c = "";
-			//std::cout << (char)(i + 65) << (char)(j + 65) << " ";
-		}
-		//std::cout << "\n";
-	}
-
-	for (int i = 0; i < 26; i++)
-	{
-		for (int j = 0; j < 26; j++)
-		{
-			std::cout << Data_Array.Combos[i][j].Combo << ": " << Data_Array.Combos[i][j].Prob << " ";
-		}
-		std::cout <<"\n";
-	}
-
-}
-
 
