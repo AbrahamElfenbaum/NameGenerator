@@ -194,12 +194,22 @@ char PickLetter(int prevLetter)
 	return '!';
 }
 
-void GetLetter(int letter, bool consonant, bool vowel)
+CHARACTER GetLetter(int letter, bool consonant, bool vowel)
 {
+	
+	CHARACTER randLetter;
 	bool loop = true;
 	while (loop)
 	{
-
+		randLetter = Data.Alphabet[rand() % 25];
+		if ((consonant && randLetter.isConsonant) || (vowel && randLetter.isVowel))
+		{
+			loop = true;
+		}
+		else
+		{
+			return randLetter;
+		}
 	}
 }
 

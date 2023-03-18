@@ -4,4 +4,5 @@ D:\Personal Projects\NameGenerator\NameGenerator\Functions.h(41,33): warning C42
 D:\Personal Projects\NameGenerator\NameGenerator\Functions.h(46,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 D:\Personal Projects\NameGenerator\NameGenerator\Functions.h(50,31): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
 D:\Personal Projects\NameGenerator\NameGenerator\Functions.h(147,25): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+D:\Personal Projects\NameGenerator\NameGenerator\Functions.h(214): warning C4715: 'GetLetter': not all control paths return a value
   NameGenerator.vcxproj -> D:\Personal Projects\NameGenerator\x64\Debug\NameGenerator.exe

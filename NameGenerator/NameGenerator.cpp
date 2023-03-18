@@ -17,7 +17,7 @@ int main()
 	GenerateProb_Test();
 #endif // 0
 
-	//std::cout << GenerateName(5, 10);
+	std::cout << GenerateName(5, 10);
 }
 
 //Credit to the YouTube Channel Let's Code Physics for the tutorial followed to make the code
